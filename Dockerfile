@@ -1,5 +1,5 @@
 FROM anapsix/alpine-java:8u192b12_jdk
-ENV version=1.2.7
+ENV version=1.3.3
 ENV KE_HOME=/kafka-eagle
 RUN apk update && \
         apk add curl sqlite && \
