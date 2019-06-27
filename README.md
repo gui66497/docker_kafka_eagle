@@ -12,7 +12,7 @@
 ```
 docker-compose up -d
 ```
-浏览器打开http://YourIP:8048/ke/,用户名admin，密码123456
+浏览器打开http://YourIP:8048/ke 用户名admin，密码123456
 
 ### reference 参考
 
