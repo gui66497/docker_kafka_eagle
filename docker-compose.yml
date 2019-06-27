@@ -27,7 +27,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   kafka-eagle:
-    image: gui66497/kafka_eagle2
+    image: gui66497/kafka_eagle
     container_name: ke
     ports:
       - "8048:8048"
