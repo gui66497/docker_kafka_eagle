@@ -33,7 +33,7 @@ services:
     container_name: ke
     restart: always
     depends_on:
-      - zookeeper
+      - kafka
     ports:
       - "8048:8048"
     environment:
