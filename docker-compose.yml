@@ -18,12 +18,11 @@ services:
     expose:
       - "9093"
     environment:
-        KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://192.168.1.35:9092
-        KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-        KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+        KAFKA_BROKER_ID: 0
+        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.1.39:9092
+        KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-        KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-        KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=192.168.1.35 -Dcom.sun.management.jmxremote.rmi.port=9999"
+        KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=192.168.1.39 -Dcom.sun.management.jmxremote.rmi.port=9999"
         JMX_PORT: 9999
         KAFKA_CREATE_TOPICS: "test:1:1"
     volumes:
